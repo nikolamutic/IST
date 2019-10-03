@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Adresar SYSTEM "Adresar.dtd">
+
+<!--xmlns="http://tempuri.org/XMLSchema.xsd"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="https://www.w3schools.com/xml Adresar.xsd"-->
+
+<Adresar>
+  <Osoba id="pid01">
+    <PunoIme>
+      <Ime>Nikola</Ime>
+      <SrednjeIme>Zoran</SrednjeIme>
+      <Prezime>Mutic</Prezime>
+    </PunoIme>
+    <DatumRodjenja>
+      <Dan>23</Dan>
+      <Mesec>3</Mesec>
+      <Godina>1997</Godina>
+    </DatumRodjenja>
+    <Adresa status="stalna">
+      <Ulica>Sumatovacka</Ulica>
+      <Broj>132</Broj>
+      <Grad>Beograd</Grad>
+      <Drzava>Srbija</Drzava>
+    </Adresa>
+    <Telefon status="mobilni">064/222-333</Telefon>
+    <Email status="sluzbeni">nikolamuta97@gmail.com</Email>
+  </Osoba>
+  <Osoba id="pid02">
+    <PunoIme>
+      <Ime>Nikola</Ime>
+      <Prezime>Nikolic</Prezime>
+      <Prezime>Jankovic</Prezime>
+    </PunoIme>
+    <DatumRodjenja>
+      <Dan>25</Dan>
+      <Mesec>11</Mesec>
+      <Godina>2004</Godina>
+    </DatumRodjenja>
+    <Adresa status="stalna">
+      <Ulica>Gnjatia Srdica</Ulica>
+      <Broj>22</Broj>
+      <Grad>Smederevska Palanka</Grad>
+    </Adresa>
+    <Telefon status="mobilni">061/444-123</Telefon>
+    <Email status="sluzbeni">nikolicn1@yahoo.com</Email>
+    <Email status="privatni">nikolicn2@gmail.com</Email>
+    <Email status="privatni">nikolicn3@hotmail.com</Email>
+  </Osoba>
+  <Osoba id="pid03">
+    <PunoIme>
+      <Ime>Janko</Ime>
+      <Prezime>Tipsarevic</Prezime>
+    </PunoIme>
+    <DatumRodjenja>
+      <Dan>11</Dan>
+      <Mesec>2</Mesec>
+      <Godina>1984</Godina>
+    </DatumRodjenja>
+    <Adresa status="stalna">
+      <Ulica>Boje Prokica</Ulica>
+      <Broj>2</Broj>
+      <Grad>Kragujevac</Grad>
+      <Drzava>Srbija</Drzava>
+    </Adresa>
+    <Telefon status="fiksni">021/200-476</Telefon>
+    <Email status="sluzbeni">jankotipsarevic@hotmail.com</Email>
+    <Email status="privatni">janko1@gmail.com</Email>
+    <Email status="privatni">jankoo1@gmail.com</Email>
+  </Osoba>
+  <Kompanija id="cid1">
+    <Naziv>Kompanija 1</Naziv>
+    <Adresa status="stalna">
+      <Ulica>Ulica 1</Ulica>
+      <Broj>11</Broj>
+      <Grad>Grad 1</Grad>
+      <Drzava>Drzava 1</Drzava>
+    </Adresa>
+    <Telefon status="mobilni">064/111-111</Telefon>
+    <Email status="sluzbeni">kompanija1@gmail.com</Email>
+    <Email status="sluzbeni">kompanija1@yahoo.com</Email>
+    <Email status="sluzbeni">kompanija1@hotmail.com</Email>
+  </Kompanija>
+  <Kompanija id="cid2">
+    <Naziv>Kompanija 2</Naziv>
+    <Adresa>
+      <Ulica>Ulica 2</Ulica>
+      <Broj>22</Broj>
+      <Grad>Grad 2</Grad>
+    </Adresa>
+    <Telefon status="mobilni">064/336-229</Telefon>
+    <Email status="sluzbeni">kompanija2@hotmail.com</Email>
+  </Kompanija>
+  <Kompanija id="cid3">
+    <Naziv>Kompanija 3</Naziv>
+    <Adresa status="stalna">
+      <Ulica>Ulica 3</Ulica>
+      <Broj>33</Broj>
+      <Grad>Grad 3</Grad>
+    </Adresa>
+    <Telefon status="mobilni">064/277-446</Telefon>
+    <Email status="sluzbeni">kompanija3@yahoo.com</Email>
+    <Email status="sluzbeni">kompanija3@gmail.com</Email>
+  </Kompanija>
+</Adresar>
