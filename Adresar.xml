@@ -53,7 +53,7 @@ xsi:schemaLocation="https://www.w3schools.com/xml Adresar.xsd"-->
       <Prezime>Tipsarevic</Prezime>
     </PunoIme>
     <DatumRodjenja>
-      <Dan>11</Dan>
+      <Dan>4</Dan>
       <Mesec>2</Mesec>
       <Godina>1984</Godina>
     </DatumRodjenja>
