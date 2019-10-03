@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://tempuri.org/XMLSchema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/XMLSchema.xsd"
+    xmlns:mstns="http://tempuri.org/XMLSchema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="Adresar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Osoba">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="PunoIme">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="Ime">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:minLength value="3"/>
+                            <xs:maxLength value="30"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="SrednjeIme" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                      <xs:element name="Prezime" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="DatumRodjenja">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="Dan">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:integer">
+                            <xs:minInclusive value="1"/>
+                            <xs:maxInclusive value="31"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="Mesec">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:integer">
+                            <xs:minInclusive value="1"/>
+                            <xs:maxInclusive value="12"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="Godina" type="xs:integer"/>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="Adresa" type="Adresa"/>
+                <xs:element name="Telefon">
+                  <xs:complexType>
+                    <xs:simpleContent>
+                      <xs:extension base="restrictionPhone">
+                        <xs:attribute name="status" type="xs:string" use="required"/>
+                      </xs:extension>
+                    </xs:simpleContent>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="Email" minOccurs="1" maxOccurs="unbounded">
+                  <xs:complexType>
+                    <xs:simpleContent>
+                      <xs:extension base="restrictionEmail">
+                        <xs:attribute name="status" type="xs:string" use="required"/>
+                      </xs:extension>
+                    </xs:simpleContent>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+              <xs:attribute name="id" type="xs:string" use="required"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Kompanija">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Naziv" type="xs:string"/>
+                <xs:element name="Adresa" type="Adresa"/>
+                <xs:element name="Telefon">
+                  <xs:complexType>
+                    <xs:simpleContent>
+                      <xs:extension base="restrictionPhone">
+                        <xs:attribute name="status" type="xs:string" use="required"/>
+                      </xs:extension>
+                    </xs:simpleContent>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="Email" minOccurs="1" maxOccurs="unbounded">
+                  <xs:complexType>
+                    <xs:simpleContent>
+                      <xs:extension base="restrictionEmail">
+                        <xs:attribute name="status" type="xs:string" use="required"/>
+                      </xs:extension>
+                    </xs:simpleContent>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+              <xs:attribute name="id" type="xs:string" use="required"/>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="Adresa">
+    <xs:sequence>
+      <xs:element name="Ulica" type="xs:string"/>
+      <xs:element name="Broj" type="xs:string"/>
+      <xs:element name="Grad" type="xs:string"/>
+      <xs:element name="Drzava" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:attribute name="status" type="xs:string" use="optional" default="privremena"/>
+  </xs:complexType>
+
+  <xs:simpleType name="restrictionPhone">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([0-9]{3}/[0-9]{3}-[0-9]{3})"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="restrictionEmail">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\c{1,20}@\c{4,8}\.com"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
