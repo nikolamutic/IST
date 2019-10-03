@@ -40,7 +40,7 @@ xsi:schemaLocation="https://www.w3schools.com/xml Adresar.xsd"-->
     <Adresa status="stalna">
       <Ulica>Gnjatia Srdica</Ulica>
       <Broj>22</Broj>
-      <Grad>Smederevska Palanka</Grad>
+      <Grad>Krusevac</Grad>
     </Adresa>
     <Telefon status="mobilni">061/444-123</Telefon>
     <Email status="sluzbeni">nikolicn1@yahoo.com</Email>
